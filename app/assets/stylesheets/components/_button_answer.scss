@@ -1,0 +1,13 @@
+.button-answer {
+    background-color: $red;
+    border: solid 3px $dark-red;
+    color: $white;
+    font-size: 16px;
+    width: 200px;
+    padding: 8px;
+    border-radius: 32px;
+    &:hover {
+        background-color: darken($red, 10%);
+        color: white;
+    }
+}

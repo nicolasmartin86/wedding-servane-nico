@@ -1,12 +1,23 @@
-.navbar-lewagon {
+.navbar-SN {
   justify-content: space-between;
   background: white;
+  border-bottom: solid 3px $dark-red;
+  .logo {
+    font-family: 'PT Serif', serif;
+    font-size: 36px;
+    color: $dark-red;
+
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-SN .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-nav {
+    align-items: center;
+    color: $dark-red;
+    .nav-item .active {
+      font-size: bold;
+    }
 }

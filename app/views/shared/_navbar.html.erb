@@ -1,5 +1,5 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+<div class="navbar navbar-expand-sm navbar-light navbar-SN">
+  <%= link_to "/", class: "navbar-brand" do %>
     <div class="logo">S&N</div>
   <% end %>
 
@@ -13,19 +13,14 @@
       <li class="nav-item active">
         <%= link_to "Les festivités", :agenda, class: "nav-link" %>
       </li>
+      <li>|</li>
       <li class="nav-item">
-        <%= link_to "A faire à Biarritz", :activities_path, class: "nav-link" %>
+          <%= link_to "A faire à Biarritz", :activities, class: "nav-link" %>    
       </li>
+      <li>|</li>
       <li class="nav-item">
-        <%= link_to "Infos pratiques", :places_path, class: "nav-link" %>
+        <%= link_to "Infos pratiques", :places, class: "nav-link" %>
       </li>
-      <!-- <li class="nav-item dropdown">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Action", "#", class: "dropdown-item" %>
-          <%= link_to "Another action", "#", class: "dropdown-item" %>
-        </div>
-      </li> -->
     </ul>
   </div>
 </div>
