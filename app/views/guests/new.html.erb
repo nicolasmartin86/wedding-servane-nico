@@ -1,0 +1,46 @@
+<div class="background-form">
+    <div class="guests-form-container">
+        <h2>Mariage de Servane & Nicolas</h2>
+        <p>On espère que vous serez parmi nous!</p>
+        <%= simple_form_for :guest, url: guests_path, method: "post" do |f| %>
+            <div class="slider-guests active-slide fade-in show">
+                <%= f.input :first_name, label: "Prénom" %>
+                <%= f.input :last_name, label: "Nom" %>
+                <%= f.input :email, label: "E-mail" %>
+                <%= f.input :address, as: :text, label: "Adresse postale" %>
+                <div class="slider-change">
+                    <div class="slider-btn next-btn slider-btn-next">Étape suivante <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="slider-indicators-container">
+                    <div class="slider-indicators active">
+                    </div>
+                    <div class="slider-indicators">
+                    </div>
+                    <div class="slider-indicators">
+                    </div>
+                </div>
+            </div>
+            <div class="slider-guests fade-in hidden-slide">
+                <div class="custom-control custom-switch">
+                    <%= f.check_box :is_coming, checked: true, class: "custom-control-input", id: "customSwitch1", 'data-on-color' => "danger", "data-on" => "Je viens", "data-off" => "Je ne viens pas malheureusement!" %>
+                    <label class="custom-control-label" for="customSwitch1">Je viens</label>
+                </div>
+                <%= f.input :accompanying_first_name, label: "Son prénom" %>
+                <%= f.input :accompanying_last_name, label: "Son nom" %>
+
+                <div class="slider-change">
+                    <div class="slider-btn previous-btn slider-btn-previous">Revenir</div>
+                    <div class="slider-btn next-btn slider-btn-next">Étape suivante <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="slider-indicators-container">
+                    <div class="slider-indicators">
+                    </div>
+                    <div class="slider-indicators active">
+                    </div>
+                    <div class="slider-indicators">
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
