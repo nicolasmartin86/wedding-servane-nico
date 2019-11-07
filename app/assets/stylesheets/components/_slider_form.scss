@@ -81,6 +81,28 @@
 }
 
 
-.custom-switch .custom-control-input:checked~.custom-control-label::before{
-    background-color: $red;
-  }
+.switches-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10%;
+    margin-bottom: 1%;
+
+}
+
+.is-coming-answer {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5% auto;
+}
+
+.coming-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hidden-form {
+    display: none;
+}
