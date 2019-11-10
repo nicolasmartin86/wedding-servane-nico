@@ -50,4 +50,19 @@ const slideToNext = () => {
     }
   };
 
-  export { slideToNext, slideToPrevious };
+  const finalSlide = () => {
+    const guestIsComing = document.querySelector("#guest_is_coming");
+    const goodAnswer = document.querySelector(".good-answer");
+    const badAnswer = document.querySelector(".bad-answer");
+    const goingToFinalSlide = document.querySelector("#to-final-slide");
+    goingToFinalSlide.addEventListener("click", (event) => {
+        event.preventDefault()
+        if (guestIsComing.value === "0") {
+            badAnswer.classList.add("hidden-form");
+        } else {
+            goodAnswer.classList.add("hidden-form")
+        };
+    })
+  }
+
+  export { slideToNext, slideToPrevious, finalSlide };

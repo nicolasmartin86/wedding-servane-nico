@@ -2,10 +2,11 @@ import "bootstrap";
 import "bootstrap-switch";
 import "jquery";
 
-import { slideToNext, slideToPrevious } from '../components/slider';
+import { slideToNext, slideToPrevious, finalSlide } from '../components/slider';
 
 slideToNext();
 slideToPrevious();
+finalSlide();
 
 $("[data-toggle='switch']").bootstrapSwitch();
 

@@ -1,0 +1,23 @@
+<table>
+    <thead>
+        <tr>
+            <th colspan="10">La liste des invités</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @guests.each do |g| %>
+            <tr>
+                <td><%= g.first_name %></td>
+                <td><%= g.last_name %></td>
+                <td><%= g.email %></td>
+                <td><%= g.address %></td>
+                <td><%= g.is_coming %></td>
+                <td><%= g.is_accompanied %></td>
+                <td><%= g.accompanying_first_name %></td>
+                <td><%= g.accompanying_last_name %></td>
+                <td><%= g.is_present_for_brunch %></td>
+                <td><%= g.comments %></td>
+            </tr>
+        <% end>
+    </tbody>
+</table>

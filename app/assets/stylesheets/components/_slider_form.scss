@@ -106,3 +106,26 @@
 .hidden-form {
     display: none;
 }
+
+.good-answer {
+    background-image: asset-url('good_mood_answer.jpg');
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+    h2 {
+        color: $dark-red;
+        bottom: 0;
+    }
+}
+
+.bad-answer {
+    background-image: asset-url('bad_mood_answer.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 100%;
+    h2 {
+        color: $dark-red;
+        bottom: 0;
+    }
+}
