@@ -1,0 +1,55 @@
+.white-color {
+    background-color: $white;
+    height: 100vh;
+    .agenda-main-title {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    h3 {
+        color: $gray;
+        font-weight: bold;
+    }
+}
+
+.agenda-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 90%;
+    margin: 0 auto;
+    .agenda-list-left, .agenda-list-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 80vh;
+    }
+    .agenda-list-left .picture-left {
+        background-image: asset-url('clair_de_lune.png');
+        background-size: cover;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        height: 30vh;
+    }
+    .agenda-list-right .picture-right {
+        background-image: asset-url('arcangues.png');
+        background-size: cover;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        height: 20vh;
+    }
+    .agenda-title {
+        color: $red;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    table {
+        margin-left: 10%;
+        width: 80%;
+    }
+    table span {
+        color: $red;
+    }
+    table tr td {
+        padding: 0.5rem 0;
+    }
+}

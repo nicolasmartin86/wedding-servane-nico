@@ -1,15 +1,15 @@
 <div class="background-form">
     <div class="guests-form-container">
-        <h2>Mariage de Servane & Nicolas</h2>
-        <p>On espère que vous serez parmi nous!</p>
+        <h3>Mariage de Servane & Nicolas</h3>
+        <!-- <p>On espère que vous serez parmi nous!</p> -->
         <%= simple_form_for :guest, url: guests_path, method: "post" do |f| %>
             <div class="slider-guests active-slide fade-in show">
-                <%= f.input :first_name, label: "Prénom" %>
-                <%= f.input :last_name, label: "Nom" %>
-                <%= f.input :email, label: "E-mail" %>
-                <%= f.input :address, as: :text, label: "Adresse postale" %>
+                <%= f.input :first_name, label: "Mon prénom" %>
+                <%= f.input :last_name, label: "Mon nom" %>
+                <%= f.input :email, label: "Mon e-mail" %>
+                <%= f.input :address, as: :text, label: "Mon adresse postale" %>
                 <div class="slider-change">
-                    <div class="slider-btn next-btn slider-btn-next">Étape suivante <i class="fas fa-arrow-right"></i></div>
+                    <div class="slider-btn next-btn slider-btn-next">Cliquez-là ;)</div>
                 </div>
                 <div class="slider-indicators-container">
                     <div class="slider-indicators active">
@@ -22,7 +22,7 @@
             </div>
             <div class="slider-guests fade-in hidden-slide">
                 <div class="is-coming-answer">
-                    <label for="guest[is_coming]">Je viens:</label>
+                    <label for="guest[is_coming]">Je viendrai avec plaisir</label>
                     <%= f.check_box :is_coming,data: { toggle: "switch-coming", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
                 </div>
                 <div class="coming-wrapper hidden-form">
@@ -33,14 +33,13 @@
                     <%= f.input :accompanying_first_name, label: "Son prénom", required: false, wrapper_html: { class: "hidden-form" } %>
                     <%= f.input :accompanying_last_name, label: "Son nom", required: false, wrapper_html: { class: "hidden-form" } %>
                     <div class="switches-display">
-                        <label for="guest[is_present_for_brunch]">Je serai présent au brunch:</label>
+                        <label for="guest[is_present_for_brunch]">Je serai présent(e) au brunch:</label>
                         <%= f.check_box :is_present_for_brunch, data: { toggle: "switch", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
                     </div>
                 </div>
 
                 <div class="slider-change">
-                    <div class="slider-btn previous-btn slider-btn-previous">Revenir</div>
-                    <div class="slider-btn next-btn slider-btn-next" id="to-final-slide">Étape suivante <i class="fas fa-arrow-right"></i></div>
+                    <div class="slider-btn next-btn slider-btn-next" id="to-final-slide">Continuez ;)</div>
                 </div>
                 <div class="slider-indicators-container">
                     <div class="slider-indicators">
@@ -50,6 +49,7 @@
                     <div class="slider-indicators">
                     </div>
                 </div>
+                <div class="slider-btn previous-btn slider-btn-previous"><i class="fas fa-arrow-left"></i></div>
             </div>
             <div class="slider-guests fade-in hidden-slide">
                 <div class="good-answer hidden-form">
@@ -60,8 +60,7 @@
                 </div>
                 <%= f.input :comments, as: :text, required: false, label: "Mots aux futurs mariés" %>
                 <div class="slider-change">
-                    <div class="slider-btn previous-btn slider-btn-previous">Revenir</div>
-                    <%= f.submit "Je valide ma réponse", class: "slider-submit-button btn-danger" %>
+                    <%= f.submit "J'envoie", class: "slider-submit-button btn-danger" %>
                 </div>
                 <div class="slider-indicators-container">
                     <div class="slider-indicators">
@@ -71,6 +70,7 @@
                     <div class="slider-indicators active">
                     </div>
                 </div>
+                <div class="slider-btn previous-btn slider-btn-previous"><i class="fas fa-arrow-left"></i></div>
             </div>
         <% end %>
     </div>
