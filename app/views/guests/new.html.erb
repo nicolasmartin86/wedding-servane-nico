@@ -52,16 +52,16 @@
                 </div>
             </div>
             <div class="slider-guests fade-in hidden-slide">
-                <div class="good-answer">
-                    <h2>On se voit donc le 19 septembre prochain!</h2>
+                <div class="good-answer hidden-form">
+                    <div class="good-title">On se voit donc le 19 septembre prochain!</div>
                 </div>
                 <div class="bad-answer">
-                    <h2>Trop dommage! On vous regrettera!</h2>
+                    <div class="bad-title">Trop dommage!<br>On vous regrettera!</div>
                 </div>
                 <%= f.input :comments, as: :text, required: false, label: "Mots aux futurs mariés" %>
                 <div class="slider-change">
                     <div class="slider-btn previous-btn slider-btn-previous">Revenir</div>
-                    <%= f.submit "Je valide ma réponse", class: "slider-btn btn-danger" %>
+                    <%= f.submit "Je valide ma réponse", class: "slider-submit-button btn-danger" %>
                 </div>
                 <div class="slider-indicators-container">
                     <div class="slider-indicators">

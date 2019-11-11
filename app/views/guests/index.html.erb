@@ -1,7 +1,16 @@
 <table>
     <thead>
         <tr>
-            <th colspan="10">La liste des invités</th>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>E-mail</th>
+            <th>Adresse</th>
+            <th>Vient-il?</th>
+            <th>Accompagné(e)?</th>
+            <th>Prénom de l'accompagnant</th>
+            <th>Nom de l'accompagnant</th>
+            <th>Vient au brunch?</th>
+            <th>Mots aux mariés</th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +27,6 @@
                 <td><%= g.is_present_for_brunch %></td>
                 <td><%= g.comments %></td>
             </tr>
-        <% end>
+        <% end %>
     </tbody>
 </table>

@@ -2,18 +2,26 @@ import "bootstrap";
 import "bootstrap-switch";
 import "jquery";
 
-import { slideToNext, slideToPrevious, finalSlide } from '../components/slider';
+import { slideToNext, slideToPrevious } from '../components/slider';
 
 slideToNext();
 slideToPrevious();
-finalSlide();
 
 $("[data-toggle='switch']").bootstrapSwitch();
 
 $("[data-toggle='switch-coming']").bootstrapSwitch({onSwitchChange: (event) => {
     const comingTarget = document.querySelector(".coming-wrapper");
+    const goodAnswer = document.querySelector(".good-answer");
+    const badAnswer = document.querySelector(".bad-answer");
     event.preventDefault();
     comingTarget.classList.toggle("hidden-form");
+    if (event.currentTarget.checked) {
+        goodAnswer.classList.remove("hidden-form");
+        badAnswer.classList.add("hidden-form");
+    } else {
+        goodAnswer.classList.add("hidden-form");
+        badAnswer.classList.remove("hidden-form");
+    }
 }
 
 });
