@@ -48,7 +48,6 @@ GEM
     bindex (0.8.1)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
-    bootstrap-toggle-rails (2.2.1.0)
     builder (3.2.3)
     byebug (11.0.1)
     coderay (1.1.2)
@@ -64,6 +63,7 @@ GEM
     ffi (1.11.1)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
+    geocoder (1.5.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.7.0)
@@ -182,9 +182,9 @@ DEPENDENCIES
   autoprefixer-rails
   better_errors
   binding_of_caller
-  bootstrap-toggle-rails
   dotenv-rails
   font-awesome-sass (~> 5.6.1)
+  geocoder
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)
