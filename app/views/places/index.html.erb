@@ -1,9 +1,9 @@
 <div id="map-places" style="width: 80%;
 height: 60vh;" data-api-key='<%= ENV["MAPBOX_API_KEY"] %>'></div>
 <div class="card-places">
-    <div class="arrows"><i class="fas fa-sort-up left-arrow"></i></div>
+    <div class="arrows left-btn-arrow"><i class="fas fa-sort-up left-arrow"></i></div>
     <% @places.each do |place| %>
-        <div class="card-place inactive">
+        <div class="card-place fade-in inactive">
             <div class="place-image" style="background-image: url('../../../assets/<%= place.photo %>');"></div>
             <div class="card-place-infos" data-markers="<%= {lng: place.longitude, lat: place.latitude}.to_json %>" data-type-of="<%= place.place_type %>" data-logo="<%= place.logo %>" data-price="<%= place.price %>">
                 <h2><%= place.title %></h2>
@@ -11,5 +11,5 @@ height: 60vh;" data-api-key='<%= ENV["MAPBOX_API_KEY"] %>'></div>
             </div>
         </div>
     <% end %>
-    <div class="arrows"><i class="fas fa-sort-up right-arrow"></i></div>
+    <div class="arrows right-btn-arrow"><i class="fas fa-sort-up right-arrow"></i></div>
 </div>

@@ -7,6 +7,15 @@ import { slideToNext, slideToPrevious } from '../components/slider';
 slideToNext();
 slideToPrevious();
 
+import { slideCardToNext, slideCardToPrevious } from '../components/card_slider';
+
+const cardPlaces = document.querySelector(".card-places");
+
+if (cardPlaces) {
+    slideCardToNext();
+    slideCardToPrevious();
+}
+
 import { initMapbox } from '../components/map';
 
 const mapPage = document.getElementById('map-places');
