@@ -1,5 +1,8 @@
 .card-places {
     display: flex;
+    height: 30vh;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .card-place {
@@ -11,10 +14,11 @@
     align-items: center;
   }
   
-.card-place img {
+.place-image {
     height: 100%;
-    width: 120px;
-    object-fit: cover;
+    width: 200px;
+    background-size: cover;
+    // object-fit: cover;
 }
 
 .card-place h2 {

@@ -14,7 +14,7 @@ const addMarkersToMap = (map, marker, logo, logo_boolean) => {
     if (logo_boolean) {
       const el = document.createElement('div');
       el.className = 'marker-logo';
-      el.style.backgroundImage = `assetUrl('${logo}')`;
+      el.style.backgroundImage = `url(${logo})`;
       el.style.backgroundSize = 'contain';
       el.style.width = '120px';
       el.style.height = '64px';
@@ -35,7 +35,7 @@ const addMarkersToMap = (map, marker, logo, logo_boolean) => {
   const fitMapToMarkers = (map, markers) => {
     const bounds = new mapboxgl.LngLatBounds();
     markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-    map.fitBounds(bounds, { padding: 70, maxZoom: 29 });
+    map.fitBounds(bounds, { padding: 70, maxZoom: 20 });
   };
   
   const initMapbox = () => {
@@ -51,8 +51,8 @@ const addMarkersToMap = (map, marker, logo, logo_boolean) => {
         // const activePlace = document.querySelector(".card-place-infos .active");
         // const activeMarker = JSON.parse(activePlace.dataset.markers);
         const markers = [churchMarker, castleMarker];
-        addMarkersToMap(map, churchMarker, 'church.png', true);
-        addMarkersToMap(map, castleMarker, 'castle.png', true);
+        addMarkersToMap(map, churchMarker, '../../../assets/church.png', true);
+        addMarkersToMap(map, castleMarker, '../../../assets/castle.png', true);
         // addMarkersToMap(map, activeMarker, '', false);
         fitMapToMarkers(map, markers);
     }
