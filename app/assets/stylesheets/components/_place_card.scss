@@ -7,18 +7,21 @@
 
 .card-place {
     overflow: hidden;
-    height: 120px;
+    height: 100%;
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
-  }
+}
+
+.inactive {
+    display: none;
+}
   
 .place-image {
     height: 100%;
-    width: 200px;
+    width: 400px;
     background-size: cover;
-    // object-fit: cover;
 }
 
 .card-place h2 {
@@ -37,4 +40,33 @@
 
 .card-place .card-place-infos {
     padding: 16px;
+    width: 50vw;
+}
+
+.left-arrow {
+    transform: rotate(-90deg);
+    align-items: center;
+    padding-top: 16px;
+}
+
+.right-arrow {
+    transform: rotate(90deg);
+    align-items: center;
+    padding-top: 8px;
+}
+
+.arrows {
+    width: 32px;
+    font-size: 32px;
+    background-color: $white;
+    color: $dark-red;
+    border: 1px solid $dark-red;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &:hover {
+        background-color: $dark-red;
+        color: $white;
+        cursor: pointer;
+    }
 }

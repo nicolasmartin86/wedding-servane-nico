@@ -1,5 +1,19 @@
 #map-places {
     width: 80%;
-    height: 60vh;
+    height: 50vh;
     margin: 0 auto;
 }
+
+.marker-logo .flat-item {
+    cursor: pointer;
+}
+
+.marker-logo .active {
+    background-color: $red;
+}
+
+.flat-item .active {
+    color: $red;
+    border: 1px solid $red;
+}
+

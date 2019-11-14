@@ -25,18 +25,32 @@ places_parameters = [
         phone_number: "+33.5.XX.XX.XX.XX",
         website_url: "",
         price: "",
-        place_type: "castle"
+        place_type: "castle",
+        logo: "<i class='fab fa-fort-awesome-alt'></i>"
     },
     {
         title: "Église d'Arcangues",
         information: "Lorem ipsum",
         subtitle: "Lieu de la cérémonie religieuse",
-        address: "Église Saint Jean-Baptiste Arcangues",
+        address: "Église Saint Jean-Baptiste, Arcangues",
         photo: "arcangues.png",
         phone_number: "+33.5.XX.XX.XX.XX",
         website_url: "",
         price: "",
-        place_type: "church"
+        place_type: "church",
+        logo: "<i class='fas fa-church'></i>"
+    },
+    {
+        title: "Pierre et Vacances",
+        information: "Lorem ipsum",
+        subtitle: "Logement trop cool",
+        address: "Le Bourg, 64200 Arcangues",
+        photo: "pierre_et_vacances.jpg",
+        phone_number: "+33.5.59.43.30.00",
+        website_url: "https://www.pierreetvacances.com/fr-fr/fp_AGL_location-residence-les-terrasses-d-arcangues",
+        price: "100€ - 150€",
+        place_type: "flat",
+        logo: ""
     }
 ]
 
