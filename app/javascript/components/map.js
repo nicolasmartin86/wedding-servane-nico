@@ -12,12 +12,22 @@ const buildMap = (mapDiv) => {
 
 const setPlaceToActive = (div) => {
     div.addEventListener("click", (event) => {
+        const target = event.currentTarget
+        const nodelistmain = document.querySelectorAll(".card-place");
+        const mainPlaces = Array.from(nodelistmain);
+        const previousPlaceActive = document.querySelector(".card-place.active");
+        const placeToDisplay = mainPlaces.find((place) => { 
+            const marker = JSON.parse(place.querySelector(".card-place-infos").dataset.markers);
+            return (marker.lng === parseFloat(target.dataset.coordinatesLng)) && (marker.lat === parseFloat(target.dataset.coordinatesLat)) });
+        placeToDisplay.classList.add("active");
+        placeToDisplay.classList.remove("inactive");
+        previousPlaceActive.classList.remove("active");
+        previousPlaceActive.classList.add("inactive"); 
         const nodelistlogo = document.querySelectorAll(".marker-logo");
         const nodelistflat = document.querySelectorAll(".flat-item");
         const logos = Array.from(nodelistlogo);
         const flats = Array.from(nodelistflat);
         const places = [...logos, ...flats];
-        const target = event.currentTarget
         target.style.color = 'red';
         const restOfPlaces = places.filter((place) => { return place.innerHTML !== event.currentTarget.innerHTML; });
         restOfPlaces.forEach((rest) => {
@@ -34,8 +44,9 @@ const addMarkersToMap = (map, marker, logo, logo_boolean, price) => {
       el.innerHTML = logoHTML;
       el.style.color = 'gray';
       el.style.fontSize = '32px';
+      el.dataset.coordinatesLat = marker.lat;
+      el.dataset.coordinatesLng = marker.lng;
 
-      
       new mapboxgl.Marker(el)
         .setLngLat(marker)
         .addTo(map);
@@ -55,6 +66,9 @@ const addMarkersToMap = (map, marker, logo, logo_boolean, price) => {
         flat.style.height = '32px';
         flat.style.border = '1px solid gray';
         flat.style.borderRadius = '8px';
+
+        flat.dataset.coordinatesLat = marker.lat;
+        flat.dataset.coordinatesLng = marker.lng;
 
         
         new mapboxgl.Marker(flat)
@@ -79,6 +93,7 @@ const addMarkersToMap = (map, marker, logo, logo_boolean, price) => {
         const nodelistmain = document.querySelectorAll(".card-place");
         const castleCard = Array.from(nodelistmain).find((place) => { return place.querySelector(".card-place-infos").dataset.typeOf === "castle" });
         castleCard.classList.remove("inactive");
+        castleCard.classList.add("active");
         const map = buildMap(mapDiv);
         const nodelist = document.querySelectorAll(".card-place-infos");
         const places = Array.from(nodelist);
