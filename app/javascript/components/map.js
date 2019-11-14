@@ -16,13 +16,13 @@ const setPlaceToActive = (div) => {
         const nodelistmain = document.querySelectorAll(".card-place");
         const mainPlaces = Array.from(nodelistmain);
         const previousPlaceActive = document.querySelector(".card-place.active");
+        previousPlaceActive.classList.remove("active");
+        previousPlaceActive.classList.add("inactive"); 
         const placeToDisplay = mainPlaces.find((place) => { 
             const marker = JSON.parse(place.querySelector(".card-place-infos").dataset.markers);
             return (marker.lng === parseFloat(target.dataset.coordinatesLng)) && (marker.lat === parseFloat(target.dataset.coordinatesLat)) });
         placeToDisplay.classList.add("active");
         placeToDisplay.classList.remove("inactive");
-        previousPlaceActive.classList.remove("active");
-        previousPlaceActive.classList.add("inactive"); 
         const nodelistlogo = document.querySelectorAll(".marker-logo");
         const nodelistflat = document.querySelectorAll(".flat-item");
         const logos = Array.from(nodelistlogo);
