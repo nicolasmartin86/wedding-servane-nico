@@ -1,8 +1,10 @@
 <div class="container">
-    <div class="background-transparent">
-        <div class="transparent"></div>
-        <div class="background-full-image">
-            <%= link_to "Je réponds!", new_guest_path, class: 'btn button-answer' %>
+    <% if mobile_device? %>
+        <div class="background-transparent">
+            <div class="transparent"></div>
+            <div class="background-full-image">
+                <%= link_to "Je réponds!", new_guest_path, class: 'btn button-answer' %>
+            </div>
         </div>
         <div class="intro">
             <div class="intro-title">
@@ -13,5 +15,21 @@
                 <span>19 Septembre 2020 à Biarritz</span> pour célébrer ce moment de joie
             </div>
         </div>
-    </div>
+    <% else %>
+        <div class="background-transparent">
+            <div class="transparent"></div>
+            <div class="background-full-image">
+                <%= link_to "Je réponds!", new_guest_path, class: 'btn button-answer' %>
+            </div>
+            <div class="intro">
+                <div class="intro-title">
+                    Servane & Nicolas se disent <span>OUI</span>
+                </div>
+                <div class="intro-text">
+                    Venez nous entourer le
+                    <span>19 Septembre 2020 à Biarritz</span> pour célébrer ce moment de joie
+                </div>
+            </div>
+        </div>
+    <% end %>
 </div>
