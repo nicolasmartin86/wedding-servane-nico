@@ -10,17 +10,56 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Les festivités", :agenda, class: "nav-link" %>
-      </li>
-      <li>|</li>
-      <li class="nav-item">
-          <%= link_to "A faire à Biarritz", :activities, class: "nav-link" %>    
-      </li>
-      <li>|</li>
-      <li class="nav-item">
-        <%= link_to "Infos pratiques", :places, class: "nav-link" %>
-      </li>
+      <% case request.fullpath %>
+        <% when '/agenda' %>
+          <li class="nav-item active">
+            <%= link_to "Les festivités", agenda_path, class: "nav-link" %>
+          </li>
+          <li>|</li>
+          <li class="nav-item">
+              <%= link_to "A faire à Biarritz", activities_path, class: "nav-link" %>    
+          </li>
+          <li>|</li>
+          <li class="nav-item">
+            <%= link_to "Infos pratiques", places_path, class: "nav-link" %>
+          </li>
+        <% when '/activities' %>
+          <li class="nav-item">
+            <%= link_to "Les festivités", agenda_path, class: "nav-link" %>
+          </li>
+          <li>|</li>
+          <li class="nav-item active">
+              <%= link_to "A faire à Biarritz", activities_path, class: "nav-link" %>    
+          </li>
+          <li>|</li>
+          <li class="nav-item">
+            <%= link_to "Infos pratiques", places_path, class: "nav-link" %>
+          </li>
+        <% when '/places' %>
+          <li class="nav-item">
+            <%= link_to "Les festivités", agenda_path, class: "nav-link" %>
+          </li>
+          <li>|</li>
+          <li class="nav-item">
+              <%= link_to "A faire à Biarritz", activities_path, class: "nav-link" %>    
+          </li>
+          <li>|</li>
+          <li class="nav-item active">
+            <%= link_to "Infos pratiques", places_path, class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Les festivités", agenda_path, class: "nav-link" %>
+          </li>
+          <li>|</li>
+          <li class="nav-item">
+              <%= link_to "A faire à Biarritz", activities_path, class: "nav-link" %>    
+          </li>
+          <li>|</li>
+          <li class="nav-item">
+            <%= link_to "Infos pratiques", places_path, class: "nav-link" %>
+          </li>
+      <% end %>
     </ul>
   </div>
 </div>
