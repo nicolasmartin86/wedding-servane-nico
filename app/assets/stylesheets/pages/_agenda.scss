@@ -1,6 +1,5 @@
 .white-color {
     background-color: $white;
-    height: 100vh;
     .agenda-main-title {
         width: 80%;
         text-align: center;
@@ -51,5 +50,27 @@
     }
     table tr td {
         padding: 0.5rem 0;
+    }
+}
+
+@media(max-width: 768px) {
+    .white-color .agenda-main-title {
+            width: 100%;
+    }
+
+    .agenda-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 95%;
+        table {
+            margin-left: 4%;
+            width: 90%;
+        }
+        table span {
+            color: $red;
+        }
+        table tr td {
+            padding: 0.2rem 0;
+        }
     }
 }

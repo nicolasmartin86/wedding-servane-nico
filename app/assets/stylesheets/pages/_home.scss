@@ -64,9 +64,10 @@
     .background-transparent {
         background-image: asset-url('homepage_SN.jpg');
         background-size: cover;
+        background-position: center;
         position: relative;
         z-index: 1;
-        height: 50vh;
+        height: 70vh;
         width: 100%;
     }
     
@@ -83,6 +84,7 @@
         z-index: 3;
         background-image: asset-url('homepage_SN.jpg');
         background-size: cover;
+        background-position: center;
         position: absolute;
         top: 5%;
         left: 5%;
@@ -93,7 +95,7 @@
 
     .btn {
         position: relative;
-        top: 75%;
+        top: 10%;
         left: 25%;
     }
 
@@ -110,11 +112,11 @@
     }
 
     .intro-title {
-        font-size: 24px;
+        font-size: 32px;
     }
     
     .intro-text {
-        font-size: 12px;
+        font-size: 18px;
     }
 
 
