@@ -1,3 +1,5 @@
+// main card places and how it is displayed by default on laptop
+
 .card-places {
     display: flex;
     height: 40vh;
@@ -14,9 +16,6 @@
     align-items: center;
 }
 
-.inactive {
-    display: none;
-}
   
 .place-image {
     height: 100%;
@@ -25,13 +24,21 @@
 }
 
 .card-place h2 {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
-    margin: 0;
+    width: 90%;
+    margin: 8px auto;
+}
+
+.card-place h3 {
+    font-size: 16px;
+    font-style: italic;
+    width: 90%;
+    margin: 8px auto;
 }
 
 .card-place p {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.4;
     opacity: .7;
     margin-bottom: 0;
@@ -41,6 +48,46 @@
 .card-place .card-place-infos {
     padding: 16px;
     width: 50vw;
+}
+
+
+// cards information details
+
+
+.card-place-infos-details {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    .bars {
+        border-left: 1px solid $gray;
+        border-right: 1px solid $gray;
+        margin: 0 16px;
+        width: 6px;
+    }
+    .card-place-infos-details-left {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card-place-infos-details-right {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .card-place-infos-price {
+            text-align: center;
+            font-size: 32px;
+            color: $dark-red;
+        }
+    }
+}
+
+// slider part with arrows and fade in fade out
+
+.inactive {
+    display: none;
 }
 
 .left-arrow {
@@ -83,6 +130,8 @@
     height: 100%;
     width: 100%;
 }
+
+// mobile responsiveness of places cards
 
 @media(max-width: 768px) {
     .card-place {

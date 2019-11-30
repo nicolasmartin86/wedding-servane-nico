@@ -18,12 +18,12 @@ Activity.destroy_all
 places_parameters = [
     {
         title: "Château du Clair de Lune",
-        information: "Lorem ipsum",
+        information: "Lieu du cocktail et de la soirée",
         subtitle: "Lieu de la réception",
         address: "48 rue Alan Seeger, 64200 Biarritz",
         photo: "clair_de_lune.png",
         phone_number: "+33.5.59.41.53.20",
-        website_url: "",
+        website_url: "http://www.hotelclairlune.fr/",
         price: "",
         place_type: "castle",
         logo: "<i class='fab fa-fort-awesome-alt'></i>"
@@ -33,7 +33,7 @@ places_parameters = [
         information: "La messe y sera célébrée par le père",
         subtitle: "Lieu de la cérémonie religieuse",
         address: "Église Saint Jean-Baptiste, Arcangues",
-        photo: "arcangues.png",
+        photo: "eglise_arcangues_2.jpeg",
         phone_number: "",
         website_url: "",
         price: "",
@@ -42,7 +42,7 @@ places_parameters = [
     },
     {
         title: "Hotel Laminak Arbonne",
-        information: "Nombre de (chambres, couchages): (6, 10)",
+        information: "Nombre de chambres: 6 <br>Nombre de couchages: 10",
         subtitle: "Hôtel",
         address: "Route de Saint-Pée, 64210 Arbonne",
         photo: "laminak_hotel.jpg",
@@ -56,7 +56,7 @@ places_parameters = [
     },
     {
         title: "Domaine de Bassilour",
-        information: "Nombre de (chambres, couchages): (6, 13) Hôtel (7, 14) Villa",
+        information: "Nombre de chambres Hôtel: 6 <br>Nombre de couchages Hôtel: 13 <br>Nombre de chambres Villa: 7 <br>Nombre de couchages Villa: 14",
         subtitle: "Hôtel et Villa",
         address: "1562 Rue Bassilour, 64210 Bidart",
         photo: "domaine_bassilour_2.jpg",
@@ -70,7 +70,7 @@ places_parameters = [
     },
     {
         title: "Camping Le Ruisseau",
-        information: "Nombre de (chambres, couchages): (-, -)",
+        information: "Nombre de chambres: - <br>Nombre de couchages: -",
         subtitle: "Camping",
         address: "900 Rue Burruntz, 64210 Bidart",
         photo: "camping_leruisseau.jpg",
@@ -82,7 +82,7 @@ places_parameters = [
     },
     {
         title: "Villa Les Hortensias",
-        information: "Nombre de (chambres, couchages): (1, 2)",
+        information: "Nombre de chambre: 1 <br>Nombre de couchages: 2",
         subtitle: "Maison d'Hôtes",
         address: "15 chemin de la Fontaine, Quartier Chapelet, 64200 Arcangues",
         photo: "les_hortensias.jpg",
@@ -96,7 +96,7 @@ places_parameters = [
     },
     {
         title: "Goiz Argi",
-        information: "Nombre de (chambres, couchages): (9, 14)",
+        information: "Nombre de chambres: 9 <br>Nombre de couchages: 14",
         subtitle: "Villa",
         address: "Chemin d'Haramburua, 64200 Arcangues",
         photo: "goiz_argi.jpg",
@@ -110,7 +110,7 @@ places_parameters = [
     },
     {
         title: "Hotel Campanile",
-        information: "Nombre de (chambres, couchages): (-, -)",
+        information: "Nombre de chambres: - <br>Nombre de couchages: -",
         subtitle: "Hôtel",
         address: "43 Rue Chapelet, 64200 Biarritz",
         photo: "campanile.jpg",
@@ -122,7 +122,7 @@ places_parameters = [
     },
     {
         title: "Hotel Aéroport Biarritz Première Classe",
-        information: "Nombre de (chambres, couchages): (-, -)",
+        information: "Nombre de chambres: - <br>Nombre de couchages: -",
         subtitle: "Hôtel",
         address: "Boulevard Marcel Dassault, 41 Rue Chapelet, 64200 Biarritz",
         photo: "premiere_classe.jpg",
@@ -136,7 +136,7 @@ places_parameters = [
     },
     {
         title: "Lapitxuri",
-        information: "Nombre de (chambres, couchages): (4, 8)",
+        information: "Nombre de chambres: 4 <br>Nombre de couchages: 8",
         subtitle: "Maison d'Hôtes",
         address: "Quartier Alotz, 64200 Arcangues",
         photo: "lapitxuri.jpg",

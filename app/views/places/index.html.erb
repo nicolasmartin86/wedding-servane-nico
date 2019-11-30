@@ -7,9 +7,32 @@
         <% @places.each do |place| %>
             <div class="card-place fade-in inactive">
                 <div class="place-image" style="background-image: url('../../../assets/<%= place.photo %>');"></div>
-                <div class="card-place-infos" data-markers="<%= {lng: place.longitude, lat: place.latitude}.to_json %>" data-type-of="<%= place.place_type %>" data-logo="<%= place.logo %>" data-price="<%= place.price %>">
+                <div class="card-place-infos" data-markers="<%= {lng: place.longitude, lat: place.latitude}.to_json %>" data-type-of="<%= place.place_type %>" data-logo="<%= place.logo %>" data-price="<%= place.price %>" data-subtitle="<%= place.subtitle %>">
                     <h2><%= place.title %></h2>
-                    <p><%= place.information %></p>
+                    <h3><%= place.subtitle %></h3>
+                    <div class="card-place-infos-details">
+                        <div class="card-place-infos-details-left">
+                            <p><%= raw(place.information) %></p>
+                            <p><%= "Addresse: #{place.address}" %></p>
+                            <div>
+                                <% if place.phone_number != "" %>
+                                    <%= link_to "Tél.: #{place.phone_number}", "tel:place.phone_number" %>
+                                <% end %>
+                            </div>
+                        </div>
+                        <div class="bars"></div>
+                        <div class="card-place-infos-details-right">
+                            <% if place.price != "" %>
+                                <p>Prix par chambre pour une nuit:</p>
+                                <div class="card-place-infos-price"><%= place.price %></div>
+                            <% end %>
+                            <div>
+                                <% if place.website_url != "" %>
+                                    <%= link_to "Accéder au site web du/de #{place.title}", place.website_url, target: :_blank %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         <% end %>

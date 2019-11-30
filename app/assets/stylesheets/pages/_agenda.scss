@@ -16,12 +16,13 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     .agenda-list-left, .agenda-list-right {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        width: 48%;
         height: 80vh;
     }
     .agenda-title {
@@ -30,14 +31,19 @@
         font-weight: bold;
     }
     table {
-        margin-left: 10%;
-        width: 80%;
+        margin-left: 5%;
+        width: 90%;
     }
     table span {
         color: $red;
     }
     table tr td {
         padding: 0.5rem 0;
+    }
+    .subtitle-italic {
+        font-size: 12px;
+        font-style: italic;
+        width: 100%;
     }
 }
 
@@ -74,11 +80,11 @@
     }
 }
 .picture-right-container {
-    background-image: asset-url('arcangues.png');
+    background-image: asset-url('eglise_arcangues_2.jpeg');
     background-size: cover;
     z-index: 1; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    height: 20vh;
+    height: 40vh;
     position: relative;
     .picture-right-transparent {
         position: absolute;
@@ -90,7 +96,7 @@
         background-color: rgba(255,255,255,0.3);
     }
     .picture-right {
-        background-image: asset-url('arcangues.png');
+        background-image: asset-url('eglise_arcangues_2.jpeg');
         background-size: cover;
         z-index: 3; 
         position: absolute;

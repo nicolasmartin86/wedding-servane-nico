@@ -38,7 +38,7 @@ const setPlaceToActive = (div) => {
     });
 };
 
-const addMarkersToMap = (map, marker, logo, logo_boolean, price) => {
+const addMarkersToMap = (map, marker, logo, logo_boolean, price, subtitle) => {
     if (logo_boolean) {
       const el = document.createElement('div');
       el.className = 'marker-logo';
@@ -58,14 +58,14 @@ const addMarkersToMap = (map, marker, logo, logo_boolean, price) => {
     } else {
         const flat = document.createElement('div');
         flat.className = 'flat-item';
-        flat.innerHTML = `${price}`;
-        flat.style.fontSize = '8px';
-        flat.style.padding = '4px';
+    flat.innerHTML = `<div>${subtitle}</div><div>${price}</div>`;
+        flat.style.fontSize = '12px';
+        flat.style.padding = '1px';
         flat.style.textAlign = 'center';
         flat.style.backgroundColor = 'white';
         flat.style.color = 'gray';
-        flat.style.width = '60px';
-        flat.style.height = '32px';
+        flat.style.width = '92px';
+        flat.style.height = '48px';
         flat.style.border = '1px solid gray';
         flat.style.borderRadius = '8px';
 
@@ -107,13 +107,14 @@ const addMarkersToMap = (map, marker, logo, logo_boolean, price) => {
             const flatMarker = JSON.parse(flat.dataset.markers);
             fitMarkers.push(flatMarker);
             const flatPrice = flat.dataset.price;
-            addMarkersToMap(map, flatMarker, ``, false, flatPrice);
+            const flatSubtitle = flat.dataset.subtitle;
+            addMarkersToMap(map, flatMarker, ``, false, flatPrice, flatSubtitle);
         });
         notFlats.forEach((notFlat) => {
             const notFlatMarker = JSON.parse(notFlat.dataset.markers);
             fitMarkers.push(notFlatMarker);
             const notFlatLogo = notFlat.dataset.logo;
-            addMarkersToMap(map, notFlatMarker, notFlatLogo, true, '');
+            addMarkersToMap(map, notFlatMarker, notFlatLogo, true, '', '');
         });
         fitMapToMarkers(map, fitMarkers);
     }
