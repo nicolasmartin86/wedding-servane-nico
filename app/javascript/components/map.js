@@ -3,10 +3,12 @@ import mapboxgl from 'mapbox-gl';
 
 const buildMap = (mapDiv) => {
     mapboxgl.accessToken = mapDiv.dataset.apiKey;
-    return new mapboxgl.Map({
+    const map = new mapboxgl.Map({
         container: 'map-places',
         style: 'mapbox://styles/mapbox/streets-v9'
-    });  
+    });
+    map.addControl(new mapboxgl.NavigationControl());
+    return map;
 };
 
 

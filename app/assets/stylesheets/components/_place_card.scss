@@ -28,6 +28,7 @@
     font-weight: bold;
     width: 90%;
     margin: 8px auto;
+    color: $dark-red;
 }
 
 .card-place h3 {
@@ -79,7 +80,6 @@
         .card-place-infos-price {
             text-align: center;
             font-size: 32px;
-            color: $dark-red;
         }
     }
 }
