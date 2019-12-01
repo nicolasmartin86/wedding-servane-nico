@@ -164,3 +164,46 @@
     padding: 8px;
     border: 1px solid $dark-red;
 }
+
+
+@media(max-width: 768px) {
+    .guests-form-container {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        h3 {
+            font-size: 16px;
+        }
+        label {
+            width: 50%;
+        }
+    }
+
+    .good-answer {
+        background-image: asset-url('good_mood_answer.jpg');
+        background-size: cover;
+        background-position: center;
+        margin: 8px auto;
+        width: 100%;
+    }
+    
+    .good-title {
+        font-size: small;
+        left: 0;
+        width: 100%;
+    }
+    
+    .bad-answer {
+        background-image: asset-url('bad_mood_answer.jpeg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        margin: 8px auto;
+        .bad-title {
+            font-size: small;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+}

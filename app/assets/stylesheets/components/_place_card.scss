@@ -21,6 +21,7 @@
     height: 100%;
     width: 400px;
     background-size: cover;
+    background-position: center;
 }
 
 .card-place h2 {
@@ -135,17 +136,61 @@
 
 @media(max-width: 768px) {
     .card-place {
-        overflow: hidden;
-        height: 100%;
+        overflow: scroll;
+        height: 130%;
         background: white;
         box-shadow: 0 0 15px rgba(0,0,0,0.2);
         display: block;
+    }
+    
+    .card-place h2 {
+        font-size: 16px;
+        margin: 4px 0;
+    }
+    
+    .card-place h3 {
+        font-size: 12px;
+        margin: 4px 0;
+    }
+    
+    .card-place p {
+        font-size: 12px;
+    }
+    
+    .card-place a {
+        font-size: 12px;
+    }
+    
+    .card-place-infos-details {
+        display: block;
+        width: 100%;
+        .bars {
+            border-top: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+            margin: 4px 0;
+            height: 3px;
+            width: 100%;
+        }
+        .card-place-infos-details-left {
+            width: 100%;
+            display: block;
+        }
+        .card-place-infos-details-right {
+            width: 100%;
+            display: block;
+            .card-place-infos-price {
+                text-align: center;
+                font-size: 24px;
+            }
+        }
     }
 
     .place-image {
         width: 100%;
         height: 40%;
-        background-size: cover;
+    }
+    .card-place .card-place-infos {
+        width: 100%;
     }
 
 }

@@ -96,7 +96,7 @@
     .btn {
         position: relative;
         top: 10%;
-        left: 25%;
+        left: 20%;
     }
 
     .intro {
@@ -106,17 +106,18 @@
         opacity: 1;
         width: 100%;
         padding: 1.6rem;
+        height: 30%;
         span {
             color: $red;
         }
     }
 
     .intro-title {
-        font-size: 32px;
+        font-size: 24px;
     }
     
     .intro-text {
-        font-size: 18px;
+        font-size: 16px;
     }
 
 

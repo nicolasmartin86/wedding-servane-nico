@@ -47,11 +47,6 @@
     }
 }
 
-// .picture-container {
-//     display: flex;
-
-// }
-
 .picture-left-container {
     background-image: asset-url('clair_de_lune.png');
     background-size: cover;
@@ -116,6 +111,9 @@
         display: grid;
         grid-template-columns: 1fr;
         width: 95%;
+        .agenda-list-left, .agenda-list-right {
+            width: 100%;
+        }
         table {
             margin-left: 4%;
             width: 90%;
