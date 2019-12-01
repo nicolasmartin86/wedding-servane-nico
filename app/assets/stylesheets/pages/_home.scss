@@ -106,8 +106,9 @@
         opacity: 1;
         width: 100%;
         padding: 1.6rem;
+        position: relative;
         // height: 30%; to be replaced when push the button for guests in production
-        height: 35%;
+        height: 40%;
         span {
             color: $red;
         }
