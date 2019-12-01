@@ -1,0 +1,32 @@
+
+<div class="container">
+    <% @tabs.each do |tab| %>
+        <div class="card-activities">
+            <div class="tab-title">
+                <%= tab %>
+            </div>
+            <% @activities.each do |activity| %>
+                <% if activity.tab == tab %>
+                    <div class="card-activity">
+                        <div class="card-activity-image" style="background-image: url('../../../assets/<%= activity.photo %>');"></div>
+                        <div class="card-activity-infos">
+                            <h2><%= activity.title %></h2>
+                            <p><%= raw(activity.information) %></p>
+                            <div>
+                                <% if activity.phone_number != "" %>
+                                    <%= link_to "Tél.: #{activity.phone_number}", "tel:activity.phone_number" %>
+                                <% end %>
+                            </div>
+                            <p><%= activity.address %></p>
+                            <div>
+                                <% if activity.website_url != "" %>
+                                    <%= link_to "Accéder au site web du/de #{activity.title}", activity.website_url, target: :_blank %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+    <% end %>
+</div>

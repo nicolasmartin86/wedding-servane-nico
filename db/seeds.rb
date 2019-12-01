@@ -156,3 +156,70 @@ end
 
 puts "Places created!"
 puts "----------"
+
+activities_parameters = [
+    {
+        title: "Cours de Surf - Alaia Surf Club",
+        tab: "Sports",
+        information: "Contacter Mathieu d'Alaia Surf Club<br>Comptez 38€/personne (session de 1h30)<br>Horaires à définir en fonction de la marée",
+        address: "Plage d'Ilbarritz",
+        phone_number: "+33.6.88.14.04.22",
+        website_url: "http://www.alaiasurfclub.com/",
+        photo: "cours_surf.png"
+    },
+    {
+        title: "Golf d'Arcangues",
+        tab: "Sports",
+        information: "18 trous - Longueur 5285m",
+        address: "Jauréguiborde, 64200 Arcangues",
+        phone_number: "+33.5.59.43.10.56",
+        website_url: "http://www.golfdarcangues.com/",
+        photo: "golf_arcangues.jpg"
+    },
+    {
+        title: "San Sebastian",
+        tab: "Shopping",
+        information: "Virée Shopping en Espagne",
+        address: "San Sebastian, Espana",
+        phone_number: "",
+        website_url: "",
+        photo: "san_sebastian.jpg"
+    },
+    {
+        title: "Macarons et Gâteaux basques de Chez Adam",
+        tab: "Shopping",
+        information: "Allez goûter les macarons et gâteaux basques de Chez Adam<br>Des incontournables du Pays Basque",
+        address: "27 place Georges Clemenceau, 64200 Biarritz",
+        phone_number: "",
+        website_url: "https://www.maisonadam.fr/",
+        photo: "macaron_adam.jpg"
+    },
+    {
+        title: "Pierre Oteiza",
+        tab: "Shopping",
+        information: "Pâtés, charcuteries et conserves du Pays Basque!",
+        address: "22 Avenue du Maréchal Foch, 64200 Biarritz",
+        phone_number: "+33.5.59.37.56.11",
+        website_url: "https://www.pierreoteiza.com/",
+        photo: "charcuterie_pierre_oteiza.jpg"    
+    },
+    {
+        title: "Maison Laffargue",
+        tab: "Shopping",
+        information: "Sacs et petite maroquinerie Luzienne",
+        address: "25 rue Léon Gambetta, 64500 Saint-Jean-de-Luz",
+        phone_number: "+33.5.59.26.11.38",
+        website_url: "https://www.maisonlaffargue.fr/58-boutique-en-ligne",
+        photo: "sacs_laffargue.jpg"    
+
+    }
+]
+
+
+
+activities_parameters.map do |activity|
+    Activity.create!(activity)
+end
+
+puts "Activities created!"
+puts "----------"
