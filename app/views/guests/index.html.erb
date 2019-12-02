@@ -1,20 +1,25 @@
-<table>
-    <thead>
-        <tr>
-            <th>Prénom</th>
-            <th>Nom</th>
-            <th>E-mail</th>
-            <th>Adresse</th>
-            <th>Vient-il?</th>
-            <th>Accompagné(e)?</th>
-            <th>Prénom de l'accompagnant</th>
-            <th>Nom de l'accompagnant</th>
-            <th>Vient au brunch?</th>
-            <th>Mots aux mariés</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% @guests.each do |g| %>
+<% unless mobile_device? %>
+    <div class="container-export-button">
+        <%= link_to "Downloader en CSV", guests_path(format: "csv"), class: "export-button" %>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>E-mail</th>
+                <th>Adresse</th>
+                <th>Vient-il?</th>
+                <th>Accompagné(e)?</th>
+                <th>Prénom de l'accompagnant</th>
+                <th>Nom de l'accompagnant</th>
+                <th>Vient au brunch?</th>
+                <th>Mots aux mariés</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @guests.each do |g| %>
             <tr>
                 <td><%= g.first_name %></td>
                 <td><%= g.last_name %></td>
@@ -27,6 +32,30 @@
                 <td><%= g.is_present_for_brunch %></td>
                 <td><%= g.comments %></td>
             </tr>
-        <% end %>
-    </tbody>
-</table>
+            <% end %>
+        </tbody>
+    </table>
+<% else %>
+    <table>
+        <thead>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Vient?</th>
+                <th>Accomp.?</th>
+                <th>Brunch?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @guests.each do |g| %>
+            <tr>
+                <td><%= g.first_name %></td>
+                <td><%= g.last_name %></td>
+                <td><%= g.is_coming %></td>
+                <td><%= g.is_accompanied %></td>
+                <td><%= g.is_present_for_brunch %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+<% end %>

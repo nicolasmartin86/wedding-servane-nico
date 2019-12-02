@@ -1,4 +1,12 @@
 <div class="container">
+    <% unless flash[:success].nil? %>
+        <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+            <%= raw(flash[:success]) %>
+            <a data-dismiss="alert" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+    <% end %>
     <% if mobile_device? %>
         <div class="background-transparent">
             <div class="transparent"></div>

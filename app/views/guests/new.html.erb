@@ -1,3 +1,11 @@
+<% unless flash[:errors].nil? %>
+    <div class="flash flash-danger alert alert-dismissible fade show" role="alert">
+        <%= flash[:errors] %>
+        <a data-dismiss="alert" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </a>
+    </div>
+<% end %>
 <div class="background-form">
     <div class="guests-form-container">
         <h3>Mariage de Servane & Nicolas</h3>
@@ -23,7 +31,7 @@
             <div class="slider-guests fade-in hidden-slide">
                 <div class="is-coming-answer">
                     <label for="guest[is_coming]">Je viendrai avec plaisir</label>
-                    <%= f.check_box :is_coming, data: { toggle: "switch-coming", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
+                    <%= f.check_box :is_coming, checked: false, data: { toggle: "switch-coming", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
                 </div>
                 <div class="coming-wrapper hidden-form">
                     <div class="switches-display">
