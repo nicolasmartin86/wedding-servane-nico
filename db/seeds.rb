@@ -168,6 +168,15 @@ activities_parameters = [
         photo: "cours_surf.png"
     },
     {
+        title: "Tennis Biarritz Olympique",
+        tab: "Sports",
+        information: "Pour une partie de tennis sur terre battue, comptez 25€/h en terre battue extérieure et 30€/h en terre battue intérieure",
+        address: "Stade d'Aguilera, Rue Cino del Duca, 64200 Biarritz",
+        phone_number: "+33.5.59.01.64.74",
+        website_url: "http://www.botennis.com/",
+        photo: "tennis_club.jpg"
+    },
+    {
         title: "Golf d'Arcangues",
         tab: "Sports",
         information: "18 trous - Longueur 5285m",
@@ -175,6 +184,24 @@ activities_parameters = [
         phone_number: "+33.5.59.43.10.56",
         website_url: "http://www.golfdarcangues.com/",
         photo: "golf_arcangues.jpg"
+    },
+    {
+        title: "Golf de Biarritz Le Phare",
+        tab: "Sports",
+        information: "18 trous - Longueur 5402m",
+        address: "2 Avenue Edith Cavell, 64200 Biarritz",
+        phone_number: "+33.5.59.03.71.80",
+        website_url: "http://www.golfbiarritz.com/",
+        photo: "golf_biarritz_phare.jpg"
+    },
+    {
+        title: "Golf d'Ilbarritz",
+        tab: "Sports",
+        information: "9 trous - Longueur 2176m",
+        address: "Avenue du Château, 64200 Biarritz",
+        phone_number: "+33.5.59.43.81.30",
+        website_url: "http://www.golfilbarritz.com/",
+        photo: "golf_ilbarritz.jpg"
     },
     {
         title: "San Sebastian",
@@ -211,7 +238,60 @@ activities_parameters = [
         phone_number: "+33.5.59.26.11.38",
         website_url: "https://www.maisonlaffargue.fr/58-boutique-en-ligne",
         photo: "sacs_laffargue.jpg"    
-
+    },
+    {
+        title: "Plage de la Côte des Basques",
+        tab: "Plages",
+        information: "Cette plage a un spot de surf légendaire!",
+        address: "Plage de la Côte des Basques à Biarritz",
+        phone_number: "",
+        website_url: "http://tourisme.biarritz.fr/fr/plages/la-cote-des-basques",
+        photo: "plage_cote_basques.jpg"    
+    },
+    {
+        title: "Plage d'Ilbarritz",
+        tab: "Plages",
+        information: "La plage d'enfance de Servane, donc la meilleure! On y trouve la boîte de nuit 'Le Blue Cargo'",
+        address: "Plage d'Ilbarritz à Bidart",
+        phone_number: "",
+        website_url: "https://www.bidarttourisme.com/activites-et-loisirs/plage-d-ilbarritz-812363",
+        photo: "plage_ilbarritz.jpg"    
+    },
+    {
+        title: "La Grande Plage de Biarritz",
+        tab: "Plages",
+        information: "La plus connue à Biarritz!",
+        address: "À Biarritz",
+        phone_number: "",
+        website_url: "http://tourisme.biarritz.fr/fr/plages/grande-plage",
+        photo: "grande_plage_biarritz.jpg"    
+    },
+    {
+        title: "La plage de Saint-Jean-de-Luz",
+        tab: "Plages",
+        information: "Très au calme, il faut aller voir Saint-Jean-de-Luz, village Ô combien connu de la région",
+        address: "À Saint-Jean-de-Luz",
+        phone_number: "",
+        website_url: "https://www.saint-jean-de-luz.com/fr/a-voir-a-faire/les-plages2/",
+        photo: "plage_saint_jean_luz.jpg"    
+    },
+    {
+        title: "Balade sur la Rhune",
+        tab: "Balades",
+        information: "La Rhune et son petit train à crémaillère vous emmènera à 905m d'altitude.<br>La Rhune, montagne sacrée du Pays Basque, offre l'un des plus beaux panoramas que l'on puisse imaginer",
+        address: "Variable selon le point de départ",
+        phone_number: "",
+        website_url: "https://kindabreak.com/itineraires-la-rhune-randonnee-paysbasque/",
+        photo: "rhune_biarritz.jpg"    
+    },
+    {
+        title: "Talaia - Le sentier du littoral",
+        tab: "Balades",
+        information: "Un peu plus de 54kms de randonnée pédestre entre Bidart et Hendaye et entre Hondarribia et San Sebastian",
+        address: "Variable selon le point de départ",
+        phone_number: "",
+        website_url: "https://randonnee.tourisme64.com/grands-itineraires/sentier-du-littoral/",
+        photo: "balade_sentier_littoral.jpeg"    
     }
 ]
 
