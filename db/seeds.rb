@@ -204,6 +204,15 @@ activities_parameters = [
         photo: "golf_ilbarritz.jpg"
     },
     {
+        title: "Bello Horizonte",
+        tab: "Shopping",
+        information: "Magasin de décorations tenu par des amis de la famille. Style de décoration balinais et indonésien. Jan et Ingrid sauront vous accueillir tel qu'il se doit. Ils seront présents à notre mariage!",
+        address: "430 avenue d'Espagne, 64210 BIDART ou 103 avenue Jalday, 64500 SAINT JEAN DE LUZ",
+        phone_number: "+33.5.59.23.99.62",
+        website_url: "https://bellohorizonte.eu/",
+        photo: "bello_horizonte.jpg"
+    },
+    {
         title: "San Sebastian",
         tab: "Shopping",
         information: "Virée Shopping en Espagne",
