@@ -113,21 +113,21 @@
         width: 100%;
         padding: 1.6rem;
         position: relative;
-        // height: 30%; to be replaced when push the button for guests in production
-        height: 40%;
+        height: 30%; //to be replaced when push the button for guests in production
+        // height: 40%;
         span {
             color: $red;
         }
     }
 
     .intro-title {
-        // font-size: 24px; to be replaced when push the button for guests in production
-        font-size: 32px;
+        font-size: 24px; //to be replaced when push the button for guests in production
+        // font-size: 32px;
     }
     
     .intro-text {
-        // font-size: 16px; to be replaced when push the button for guests in production
-        font-size: 18px;
+        font-size: 16px; //to be replaced when push the button for guests in production
+        // font-size: 18px;
     }
 
 

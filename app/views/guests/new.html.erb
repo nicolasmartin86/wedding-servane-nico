@@ -34,12 +34,12 @@
                     <%= f.check_box :is_coming, checked: false, data: { toggle: "switch-coming", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
                 </div>
                 <div class="coming-wrapper hidden-form">
-                    <div class="switches-display">
-                        <label for="guest[is_accompanied]">Accompagné(e)?</label>
-                        <%= f.check_box :is_accompanied, data: { toggle: "switch-accompanied", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
-                    </div>
-                    <%= f.input :accompanying_first_name, label: "Son prénom", required: false, wrapper_html: { class: "hidden-form" } %>
-                    <%= f.input :accompanying_last_name, label: "Son nom", required: false, wrapper_html: { class: "hidden-form" } %>
+                    <!-- <div class="switches-display">
+                        <label for="guest[is_accompanied]">Accompagné(e)?</label> -->
+                        <%#= f.check_box :is_accompanied, data: { toggle: "switch-accompanied", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
+                    <!-- </div> -->
+                    <%#= f.input :accompanying_first_name, label: "Son prénom", required: false, wrapper_html: { class: "hidden-form" } %>
+                    <%#= f.input :accompanying_last_name, label: "Son nom", required: false, wrapper_html: { class: "hidden-form" } %>
                     <div class="switches-display">
                         <label for="guest[is_present_for_brunch]">Je serai présent(e) au brunch:</label>
                         <%= f.check_box :is_present_for_brunch, data: { toggle: "switch", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
