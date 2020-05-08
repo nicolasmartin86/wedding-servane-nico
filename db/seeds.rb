@@ -30,7 +30,7 @@ places_parameters = [
     },
     {
         title: "Église d'Arcangues",
-        information: "La messe y sera célébrée par le père",
+        information: "La messe y sera célébrée par l'abbé Dominique Sentucq",
         subtitle: "Lieu de la cérémonie religieuse",
         address: "Église Saint Jean-Baptiste, Arcangues",
         photo: "eglise_arcangues_2.jpeg",
