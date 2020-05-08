@@ -27,6 +27,12 @@
           <li class="nav-item">
             <%= link_to "Infos pratiques", places_path, class: "nav-link" %>
           </li>
+          <% unless mobile_device? %>
+            <li>|</li>
+          <% end %>
+          <li class="nav-item">
+            <%= link_to "Liste de mariage", "https://www.millemercismariage.com/servaneetnicolas/liste.html", target: "_blank", class: "nav-link" %>
+          </li>
         <% when '/activities' %>
           <li class="nav-item">
             <%= link_to "Les festivités", agenda_path, class: "nav-link" %>
@@ -42,6 +48,12 @@
           <% end %>
           <li class="nav-item">
             <%= link_to "Infos pratiques", places_path, class: "nav-link" %>
+          </li>
+          <% unless mobile_device? %>
+            <li>|</li>
+          <% end %>
+          <li class="nav-item">
+            <%= link_to "Liste de mariage", "https://www.millemercismariage.com/servaneetnicolas/liste.html", target: "_blank", class: "nav-link" %>
           </li>
         <% when '/places' %>
           <li class="nav-item">
@@ -59,6 +71,12 @@
           <li class="nav-item active">
             <%= link_to "Infos pratiques", places_path, class: "nav-link" %>
           </li>
+          <% unless mobile_device? %>
+            <li>|</li>
+          <% end %>
+          <li class="nav-item">
+            <%= link_to "Liste de mariage", "https://www.millemercismariage.com/servaneetnicolas/liste.html", target: "_blank", class: "nav-link" %>
+          </li>
         <% else %>
           <li class="nav-item">
             <%= link_to "Les festivités", agenda_path, class: "nav-link" %>
@@ -74,6 +92,12 @@
           <% end %>
           <li class="nav-item">
             <%= link_to "Infos pratiques", places_path, class: "nav-link" %>
+          </li>
+          <% unless mobile_device? %>
+            <li>|</li>
+          <% end %>
+          <li class="nav-item">
+            <%= link_to "Liste de mariage", "https://www.millemercismariage.com/servaneetnicolas/liste.html", target: "_blank", class: "nav-link" %>
           </li>
       <% end %>
     </ul>
