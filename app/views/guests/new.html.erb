@@ -34,9 +34,9 @@
                     <%= f.check_box :is_coming, checked: false, data: { toggle: "switch-coming", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
                 </div>
                 <div class="coming-wrapper hidden-form">
-                    <!-- <div class="switches-display">
-                        <label for="guest[is_accompanied]">Accompagné(e)?</label> -->
-                        <%#= f.check_box :is_accompanied, data: { toggle: "switch-accompanied", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
+                <!-- <div class="switches-display">
+                    <label for="guest[is_accompanied]">Accompagné(e)?</label> -->
+                    <%#= f.check_box :is_accompanied, data: { toggle: "switch-accompanied", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
                     <!-- </div> -->
                     <%#= f.input :accompanying_first_name, label: "Son prénom", required: false, wrapper_html: { class: "hidden-form" } %>
                     <%#= f.input :accompanying_last_name, label: "Son nom", required: false, wrapper_html: { class: "hidden-form" } %>
@@ -45,7 +45,10 @@
                         <%= f.check_box :is_present_for_brunch, data: { toggle: "switch", "on-color" => "danger", "off-color" => "default", "on-text" => "Oui", "off-text" => "Non" } %>
                     </div>
                 </div>
-
+                    
+                <div class="mt-3 p-3 text-center subtitle-italic">
+                    En raison de pièces d'eau non surveillées, nous ne pourrons malheureusement pas accueillir vos enfants
+                </div>
                 <div class="slider-change">
                     <div class="slider-btn next-btn slider-btn-next" id="to-final-slide">Continuez ;)</div>
                 </div>
